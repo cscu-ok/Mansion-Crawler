@@ -4,10 +4,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 3.5f;
     private Vector2 inputMovement;
+    private Animator animator;
     private Rigidbody rb;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -20,6 +22,9 @@ public class PlayerMovement : MonoBehaviour
         else if (inputMovement.x < 0) transform.eulerAngles = new Vector3(0, 90, 0);
         else if (inputMovement.y > 0) transform.eulerAngles = new Vector3(0, 180, 0);
         else if (inputMovement.y < 0) transform.eulerAngles = new Vector3(0, 0, 0);
+
+        bool isWalking = inputMovement.x != 0 || inputMovement.y != 0;
+        animator.SetBool("isWalking", isWalking);
     }
 
     void FixedUpdate()
