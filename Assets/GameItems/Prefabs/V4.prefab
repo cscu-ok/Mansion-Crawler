@@ -317,6 +317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3324225138729255165}
+  - component: {fileID: 8425204021536046762}
   m_Layer: 0
   m_Name: LeftLeg
   m_TagString: Untagged
@@ -341,6 +342,28 @@ Transform:
   - {fileID: 4541676164771786131}
   m_Father: {fileID: 5820919156947455516}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8425204021536046762
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615102243617496139}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 67e25e87efd7f6d45b76a27771bd5aa5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2623900257022478690
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8206056700211407130}
+  - component: {fileID: 419870865223103706}
   m_Layer: 0
   m_Name: RightLeg
   m_TagString: Untagged
@@ -891,6 +915,28 @@ Transform:
   - {fileID: 111064778586399356}
   m_Father: {fileID: 5820919156947455516}
   m_LocalEulerAnglesHint: {x: 0, y: 45.871, z: 0}
+--- !u!95 &419870865223103706
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7082913371385344575}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c78f1f6d8f5d30f4cb53299f0ee7927f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7684978184176614506
 GameObject:
   m_ObjectHideFlags: 0
