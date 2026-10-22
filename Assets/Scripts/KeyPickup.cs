@@ -5,11 +5,13 @@ public class KeyPickup : MonoBehaviour
 {
     public GameObject pickupPrompt;
     private bool playerInRange = false;
+    public static bool hasKey = false;
 
     private void Update()
     {
         if(playerInRange && Input.GetKeyDown(KeyCode.E))
         {
+            hasKey = true;
             pickupPrompt.gameObject.SetActive(false);
             gameObject.SetActive(false);
         }
