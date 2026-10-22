@@ -7,6 +7,11 @@ public class KeyPickup : MonoBehaviour
     private bool playerInRange = false;
     public static bool hasKey = false;
 
+    private void Awake()
+    {
+        hasKey = false;
+    }
+
     private void Update()
     {
         if(playerInRange && Input.GetKeyDown(KeyCode.E))

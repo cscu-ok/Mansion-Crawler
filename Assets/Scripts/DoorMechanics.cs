@@ -19,6 +19,7 @@ public class DoorMechanics : MonoBehaviour
             if (KeyPickup.hasKey)
             {
                 animator.SetBool("isOpen", true);
+                Invoke(nameof(DisableAnimator), 1f);
             }
             else
             {
@@ -31,5 +32,10 @@ public class DoorMechanics : MonoBehaviour
     public void setDoorDialogueFalse()
     {
         doorDialogue.SetActive(false);
+    }
+
+    private void DisableAnimator()
+    {
+        animator.enabled = false;
     }
 }
