@@ -35,14 +35,14 @@ Below are some steps of basic version control:
 2. Make sure to branch out from main before working in Unity of VS Code (New branch: `git checkout -b <<your-branch-name>>` Existing branch: `git checkout <<your-branch-name>>`)
 3. Save changes frequently, and when ready to commit, you can use VS Code's built in panel, or through the terminal by following the steps below:
 
-If first time pushing to branch, set the upstream in initial commit message:
+If first time pushing the branch to GitHub, set the upstream tracking link:
 ```bash
 git add .                                    # stage all changes
 git commit -m "your commit message here"     # commit with message
 git push -u origin feature/your-feature-name    # push to GitHub
 ```
 
-On the following additional commits, simply do:
+On subsequent commits to the same branch, simply do:
 ```bash
 git add .
 git commit -m "your commit message here"
