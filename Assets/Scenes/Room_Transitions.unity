@@ -2189,6 +2189,8 @@ MonoBehaviour:
   panSpeed: 5
   player: {fileID: 635013995}
   playerTarget: -11
+  isTransitionImmediate: 1
+  transitionDelay: 5
 --- !u!65 &962747280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3095,10 +3097,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room_Transition
   camera: {fileID: 330585545}
-  targetX: -14.8
+  targetX: 0.08
   panSpeed: 5
   player: {fileID: 635013995}
-  playerTarget: -11
+  playerTarget: -4
+  isTransitionImmediate: 0
+  transitionDelay: 5
 --- !u!23 &1580025496
 MeshRenderer:
   m_ObjectHideFlags: 0
