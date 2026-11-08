@@ -992,6 +992,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5047090315126433309, guid: ea32ae504ddcc7c4fa0a67bf2c4d2cc0, type: 3}
   m_PrefabInstance: {fileID: 375264637}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &445848078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5386225873294370924, guid: 021d90faa51839d4fa8f16052db6290b, type: 3}
+  m_PrefabInstance: {fileID: 1178756558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &572135311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,7 +2124,7 @@ Transform:
   m_GameObject: {fileID: 962747275}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.987, y: 0.4468, z: 1.2544}
+  m_LocalPosition: {x: -4.906, y: 0.4468, z: 1.2544}
   m_LocalScale: {x: 0.030964682, y: 1.0558133, z: 0.82965684}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2138,12 +2143,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room_Transition
   camera: {fileID: 330585545}
+  nextRoomDoor: {fileID: 445848078}
+  nextRoomDoorZ: 1.28
+  doorSlideSpeed: 3
+  doorSlideDelay: 0.05
   targetX: -14.8
   panSpeed: 5
   player: {fileID: 635013995}
-  playerTarget: -11
-  isTransitionImmediate: 1
-  transitionDelay: 5
+  playerTarget: -13
 --- !u!65 &962747280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2480,6 +2487,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1988190277064244922, guid: 021d90faa51839d4fa8f16052db6290b, type: 3}
+      propertyPath: doorDialogue
+      value: 
+      objectReference: {fileID: 1265825048}
     - target: {fileID: 5386225873294370924, guid: 021d90faa51839d4fa8f16052db6290b, type: 3}
       propertyPath: m_Name
       value: Door
@@ -3197,138 +3208,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 293445097687019601, guid: 4b16dc8216dc9a947b6d2e5016683334, type: 3}
   m_PrefabInstance: {fileID: 1519475682}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1580025493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1580025498}
-  - component: {fileID: 1580025497}
-  - component: {fileID: 1580025496}
-  - component: {fileID: 1580025495}
-  - component: {fileID: 1580025494}
-  m_Layer: 0
-  m_Name: RoomTripwire2-1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1580025494
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580025493}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1580025495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580025493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62e9a628497d25c4c917acbd965b99e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Room_Transition
-  camera: {fileID: 330585545}
-  targetX: 0.08
-  panSpeed: 5
-  player: {fileID: 635013995}
-  playerTarget: -4
-  isTransitionImmediate: 0
-  transitionDelay: 5
---- !u!23 &1580025496
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580025493}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1580025497
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580025493}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1580025498
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580025493}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.92, y: 0.4468, z: 1.2544}
-  m_LocalScale: {x: 0.030964682, y: 1.0558133, z: 0.82965684}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1583227306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4549,4 +4428,3 @@ SceneRoots:
   - {fileID: 2088127226}
   - {fileID: 845051150}
   - {fileID: 962747278}
-  - {fileID: 1580025498}

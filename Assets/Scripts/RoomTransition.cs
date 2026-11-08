@@ -4,12 +4,14 @@ using UnityEngine;
 public class Room_Transition : MonoBehaviour
 {
     public Camera camera;
+    public GameObject nextRoomDoor;
+    public float nextRoomDoorZ = 1.28f;
+    public float doorSlideSpeed = 3f;
+    public float doorSlideDelay = 0.1f;
     public float targetX = -14.8f;
     public float panSpeed = 5f;
     public Transform player;
     public float playerTarget = -11f;
-    public bool isTransitionImmediate = true;
-    public float transitionDelay = 5f;
     private bool triggered = false;
 
     private void OnTriggerEnter(Collider other)
@@ -24,11 +26,6 @@ public class Room_Transition : MonoBehaviour
 
     private IEnumerator RoomTransition()
     {
-        if (!isTransitionImmediate)
-        {
-            yield return new WaitForSeconds(transitionDelay);
-        }
-
         PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
         playerMovement.enabled = false;
 
@@ -51,6 +48,19 @@ public class Room_Transition : MonoBehaviour
 
         camera.transform.position = cameraTargetPosition;
         player.position = playerTargetPosition;
+
+        yield return new WaitForSeconds(doorSlideDelay);
+        yield return StartCoroutine(SlideDoor());
+
         playerMovement.enabled = true;
+    }
+
+    private IEnumerator SlideDoor()
+    {
+        Animator doorAnimator = nextRoomDoor.GetComponent<Animator>();
+        doorAnimator.SetBool("isClosed", true);
+
+        yield return new WaitForSeconds(1f);
+        doorAnimator.enabled = false;
     }
 }
