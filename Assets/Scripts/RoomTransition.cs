@@ -7,7 +7,7 @@ public class Room_Transition : MonoBehaviour
     public GameObject nextRoomDoor;
     public float nextRoomDoorZ = 1.28f;
     public float doorSlideSpeed = 3f;
-    public float doorSlideDelay = 0.1f;
+    public float doorSlideDelay = 0.5f;
     public float targetX = -14.8f;
     public float panSpeed = 5f;
     public Transform player;
@@ -48,11 +48,10 @@ public class Room_Transition : MonoBehaviour
 
         camera.transform.position = cameraTargetPosition;
         player.position = playerTargetPosition;
+        playerMovement.enabled = true;
 
         yield return new WaitForSeconds(doorSlideDelay);
-        yield return StartCoroutine(SlideDoor());
-
-        playerMovement.enabled = true;
+        StartCoroutine(SlideDoor());
     }
 
     private IEnumerator SlideDoor()
