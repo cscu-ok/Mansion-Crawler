@@ -12,13 +12,11 @@ public class Room_Transition : MonoBehaviour
     public float panSpeed = 5f;
     public Transform player;
     public float playerTarget = -11f;
-    private bool triggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !triggered)
+        if (other.CompareTag("Player"))
         {
-            triggered = true;
             GetComponent<BoxCollider>().enabled = false;
             StartCoroutine(RoomTransition());
         }
@@ -35,11 +33,13 @@ public class Room_Transition : MonoBehaviour
         Vector3 playerTargetPosition = new Vector3(playerTarget, playerStartPosition.y, playerStartPosition.z);
 
         float elapsed = 0f;
+        // distance to travel divided by speed gives us the duration of the transition
         float duration = Mathf.Abs(targetX - cameraStartPosition.x) / panSpeed;
 
         while (elapsed < duration)
         {
             float t = elapsed / duration;
+            // Lerp = linear interpolation between two values based on t (0 to 1) for smooth transition
             camera.transform.position = Vector3.Lerp(cameraStartPosition, cameraTargetPosition, t);
             player.position = Vector3.Lerp(playerStartPosition, playerTargetPosition, t);
             elapsed += Time.deltaTime;
