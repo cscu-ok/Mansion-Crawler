@@ -4,21 +4,27 @@ using UnityEngine;
 public class Room_Transition : MonoBehaviour
 {
     public Camera camera;
-    public float targetX;
-    public float panSpeed = 15f;
+    public float targetX1;
+    public float targetX2;
+    public float panSpeed = 10f;
 
-    private static bool isTransitioning = false;
+    private int triggerCount = 0;
+    private Coroutine currentTransition;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isTransitioning)
+        if (other.CompareTag("Player"))
         {
-            isTransitioning = true;
-            StartCoroutine(RoomTransition());
+            float targetX = triggerCount % 2 == 0 ? targetX2 : targetX1;
+            triggerCount++;
+            if (currentTransition != null)
+                StopCoroutine(currentTransition);
+
+            currentTransition = StartCoroutine(RoomTransition(targetX));
         }
     }
 
-    private IEnumerator RoomTransition()
+    private IEnumerator RoomTransition(float targetX)
     {
         Vector3 cameraStartPosition = camera.transform.position;
         Vector3 cameraTargetPosition = new Vector3(targetX, cameraStartPosition.y, cameraStartPosition.z);
@@ -35,6 +41,6 @@ public class Room_Transition : MonoBehaviour
         }
 
         camera.transform.position = cameraTargetPosition;
-        isTransitioning = false;
+        currentTransition = null;
     }
 }
