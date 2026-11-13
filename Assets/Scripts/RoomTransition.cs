@@ -5,7 +5,7 @@ public class Room_Transition : MonoBehaviour
 {
     public Camera camera;
     public float targetX;
-    public float panSpeed = 5f;
+    public float panSpeed = 15f;
 
     private static bool isTransitioning = false;
 

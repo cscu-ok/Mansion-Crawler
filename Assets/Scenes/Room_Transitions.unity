@@ -174,7 +174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room_Transition
   camera: {fileID: 330585545}
   targetX: -0.08
-  panSpeed: 9
+  panSpeed: 15
+  transitionCooldown: 0.5
 --- !u!23 &6034910
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -954,7 +955,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room_Transition
   camera: {fileID: 330585545}
   targetX: -10
-  panSpeed: 9
+  panSpeed: 15
+  transitionCooldown: 0.5
 --- !u!65 &962747280
 BoxCollider:
   m_ObjectHideFlags: 0
