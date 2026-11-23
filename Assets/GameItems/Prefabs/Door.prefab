@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 751985564101078491}
   - component: {fileID: -6027614522414786906}
-  - component: {fileID: 1988190277064244922}
   - component: {fileID: 1377980815000195652}
   m_Layer: 0
   m_Name: Door
@@ -55,21 +54,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.73609906, y: 1.023736, z: 0.058856465}
-  m_Center: {x: -0.001240015, y: 0.4975586, z: 0.0021819882}
---- !u!114 &1988190277064244922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5386225873294370924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132c794666cc85d418eb9619b5bf949f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorMechanics
-  doorDialogue: {fileID: 0}
+  m_Size: {x: 0.8752023, y: 1.023736, z: 0.19551699}
+  m_Center: {x: 0.00026333332, y: 0.4975586, z: -0.066148296}
 --- !u!95 &1377980815000195652
 Animator:
   serializedVersion: 7
@@ -120,8 +106,8 @@ Transform:
   m_GameObject: {fileID: 5426204193959050944}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.271, y: 0.471, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 0.271, y: 0.471, z: 0.008}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 751985564101078491}
@@ -232,8 +218,8 @@ Transform:
   m_GameObject: {fileID: 6863740536484646378}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0.5, z: 0.012}
-  m_LocalScale: {x: 0.064229116, y: 1.0163014, z: 0.7335636}
+  m_LocalPosition: {x: 0, y: 0.5054, z: 0.0318}
+  m_LocalScale: {x: 0.024657557, y: 1.0270742, z: 0.7335636}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 751985564101078491}
