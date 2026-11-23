@@ -827,7 +827,7 @@ MonoBehaviour:
   camera: {fileID: 330585545}
   targetX1: -0.08
   targetX2: -10
-  panSpeed: 10
+  panSpeed: 15
 --- !u!65 &962747280
 BoxCollider:
   m_ObjectHideFlags: 0

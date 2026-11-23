@@ -6,7 +6,7 @@ public class Room_Transition : MonoBehaviour
     public Camera camera;
     public float targetX1;
     public float targetX2;
-    public float panSpeed = 10f;
+    public float panSpeed = 15f;
 
     private int triggerCount = 0;
     private Coroutine currentTransition;
